@@ -1,0 +1,26 @@
+﻿<Window x:Class="Hospital.Views.CreateAppointmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.Views"
+        mc:Ignorable="d"
+        Height="320" Width="320"  ResizeMode="NoResize" Title="Make appointment" Icon="{StaticResource ScheduleIcon}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <Calendar x:Name="Calendar" Grid.Row="0" SelectedDatesChanged="Calendar_SelectedDatesChanged" DisplayDateChanged="Calendar_DisplayDateChanged">
+            <Calendar.CalendarDayButtonStyle>
+                <Style TargetType="CalendarDayButton" BasedOn="{StaticResource {x:Type CalendarDayButton}}">
+                    <EventSetter Event="Loaded" Handler="CalendarButton_Loaded" />
+                </Style>
+            </Calendar.CalendarDayButtonStyle>
+        </Calendar>
+        <ComboBox Name="TimeCB" Style="{StaticResource BaseComboBox}" Grid.Row="1" Width="200" Height="25"/>
+        <Button x:Name="MakeButton" Content="Make Appointment" Style="{StaticResource GreenButton}" Grid.Row="2" Width="150" FontSize="14" Click="MakeButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="Hospital.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital"
+        mc:Ignorable="d"
+        Height="320" Width="305" ResizeMode="NoResize" Title="Login" Icon="{StaticResource LoginIcon}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Fill="SeaGreen" />
+        <Image Source="{StaticResource LockIcon}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="64" Height="64"/>
+
+        <Image Source="{StaticResource UserIcon}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+        <TextBox x:Name="LoginTB" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource BaseTextBox}" Margin="80,0,0,0" Width="200"/>
+
+        <Image Source="{StaticResource KeyIcon}" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="42" Height="42" Margin="30,0,0,0"/>
+        <PasswordBox x:Name="PasswordBox" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource BasePasswordBox}" Margin="80,0,0,0" Width="200"/>
+
+        <Button x:Name="SigninButton" Content="Sign in" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource GreenButton}" Click="SigninButton_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource RedButton}" Click="ExitButton_Click"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CenterTextBlock}">
+            <Hyperlink x:Name="ForgotPasswordHL" Click="ForgotPasswordHL_Click">
+                Forgot password?
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

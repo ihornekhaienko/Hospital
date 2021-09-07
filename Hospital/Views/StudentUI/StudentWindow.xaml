@@ -1,0 +1,56 @@
+﻿<Window x:Class="Hospital.Views.StudentUI.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.Views.StudentUI"
+        mc:Ignorable="d"
+               Height="950" Width="1500" Closed="Window_Closed" WindowState="Maximized" Title="Student window" Icon="{StaticResource StudentIcon}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="7.5*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="11" Grid.ColumnSpan="2" Fill="MediumSeaGreen" />
+        <Image x:Name="UserImage" Source="{StaticResource UserIcon}" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Stretch="Uniform"/>
+
+        <TextBlock x:Name="UsernameTB" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource CenterTextBlock}" FontSize="30"/>
+
+        <Button  Grid.Row="3" Grid.Column="0" Click="DoctorButton_Click" Background="Transparent" BorderBrush="{x:Null}">
+            <Image Source="{StaticResource DoctorIcon}"/>
+        </Button>
+        <Button x:Name="DoctorButton" Content="Doctors" Grid.Row="3" Grid.Column="1" Style="{StaticResource NavigationButton}" Click="DoctorButton_Click"/>
+
+        <Button Grid.Row="4" Grid.Column="0"  Click="VisitsButton_Click" Background="Transparent" BorderBrush="{x:Null}">
+            <Image Source="{StaticResource CalendarIcon}"/>
+        </Button>
+        <Button x:Name="VisitsButton" Content="Visits" Grid.Row="4" Grid.Column="1" Style="{StaticResource NavigationButton}" Click="VisitsButton_Click"/>
+
+        <Button Grid.Row="5" Grid.Column="0" Click="ProfileButton_Click" Background="Transparent" BorderBrush="{x:Null}">
+            <Image Source="{StaticResource SettingsIcon}"/>
+        </Button>
+        <Button x:Name="ProfileButton" Content="Profile" Grid.Row="5" Grid.Column="1" Style="{StaticResource NavigationButton}" Click="ProfileButton_Click"/>
+
+        <Rectangle Grid.Row="0" Grid.Column="3"  Grid.ColumnSpan="4" Fill="MediumSeaGreen" />
+        <Button x:Name="ExitButton" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Width="48" Height="48" Margin="0,0,10,0" Click="ExitButton_Click" Background="Transparent" BorderBrush="{x:Null}">
+            <Image Source="{StaticResource ExitIcon}"/>
+        </Button>
+        
+        <Frame x:Name="WindowContent" Grid.Row="1" Grid.Column="2" Grid.RowSpan="10"/>
+    </Grid>
+</Window>

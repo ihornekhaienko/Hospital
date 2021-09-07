@@ -1,0 +1,44 @@
+﻿<Window x:Class="Hospital.Views.AddScheduleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hospital.Views"
+        xmlns:xwpf="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Height="320" Width="440" ResizeMode="NoResize" Title="Add schedule Icon" Icon="{StaticResource ScheduleIcon}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Doctor" Grid.Row="0" Grid.Column="0" Style="{StaticResource BaseLabel}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="DoctorTB" Grid.Row="1" Grid.Column="0" Style="{StaticResource CenterTextBlock}"/>
+        <Label Content="Day of Week" Grid.Row="0" Grid.Column="1" Style="{StaticResource BaseLabel}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox x:Name="DayOfWeekCB" Grid.Row="1" Grid.Column="1" Style="{StaticResource BaseComboBox}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" SelectionChanged="DayOfWeekCB_SelectionChanged">
+            <TextBlock Text="Monday"/>
+            <TextBlock Text="Tuesday"/>
+            <TextBlock Text="Wednesday"/>
+            <TextBlock Text="Thursday"/>
+            <TextBlock Text="Friday"/>
+            <TextBlock Text="Saturday"/>
+            <TextBlock Text="Sunday"/>
+        </ComboBox>
+
+        <Label Content="Start of Shift" Grid.Row="2" Grid.Column="0" Style="{StaticResource BaseLabel}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <xwpf:DateTimePicker x:Name="StartDTP" Width="150" Format="ShortTime" Grid.Row="3" Grid.Column="0" Style="{StaticResource BaseDateTimePicker}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="End of Shift" Grid.Row="2" Grid.Column="1" Style="{StaticResource BaseLabel}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <xwpf:DateTimePicker x:Name="EndDTP" Width="150" Format="ShortTime" Grid.Row="3" Grid.Column="1" Style="{StaticResource BaseDateTimePicker}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button x:Name="AddUpdateButton" Content="Add" Style="{StaticResource GreenButton}" Grid.Row="4" Grid.Column="0" Click="AddUpdateButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete" Style="{StaticResource RedButton}" Grid.Row="4" Grid.Column="1" Click="DeleteButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="Hospital.Views.Filters.DoctorFilterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xwpf="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:Hospital.Views.Filters"
+        mc:Ignorable="d"
+        Height="480" Width="640" ResizeMode="NoResize" Title="Doctor filter" Icon="{StaticResource FilterIcon}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Name" Grid.Row="0" Grid.Column="0" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox x:Name="NameTB" Grid.Row="1" Grid.Column="0" Style="{StaticResource BaseTextBox}" Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0"/>
+
+        <Label Content="Surname" Grid.Row="0" Grid.Column="1" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <TextBox x:Name="SurnameTB" Grid.Row="1" Grid.Column="1" Style="{StaticResource BaseTextBox}" Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0"/>
+
+        <Label Content="Reception day" Grid.Row="2" Grid.Column="0" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <ComboBox x:Name="DayCB" Grid.Row="3" Grid.Column="0" Style="{StaticResource BaseComboBox}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" Width="190">
+            <TextBlock Text="Monday"/>
+            <TextBlock Text="Tuesday"/>
+            <TextBlock Text="Wednesday"/>
+            <TextBlock Text="Thursday"/>
+            <TextBlock Text="Friday"/>
+            <TextBlock Text="Saturday"/>
+            <TextBlock Text="Sunday"/>
+        </ComboBox>
+
+        <Label Content="Reception time (from)" Grid.Row="2" Grid.Column="1" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <xwpf:DateTimePicker x:Name="FromTP" Width="190" Format="ShortTime" Grid.Row="3" Grid.Column="1" Style="{StaticResource BaseDateTimePicker}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Label Content="Reception time (to)" Grid.Row="2" Grid.Column="2" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <xwpf:DateTimePicker x:Name="ToTP" Width="190" Format="ShortTime" Grid.Row="3" Grid.Column="2" Style="{StaticResource BaseDateTimePicker}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Label Content="Specialty" Grid.Row="4" Grid.Column="0" Style="{StaticResource BaseLabel}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        <ComboBox x:Name="SpecialtyCB" Grid.Row="5" Grid.Column="0" Style="{StaticResource BaseComboBox}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0" Width="190"/>
+
+        <Button x:Name="ConfirmButton" Content="Confirm" Style="{StaticResource GreenButton}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Click="ConfirmButton_Click"/>
+        <Button x:Name="ClearButton" Content="Clear" Style="{StaticResource RedButton}" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Click="ClearButton_Click"/>
+    </Grid>
+</Window>

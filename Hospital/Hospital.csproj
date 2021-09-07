@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\account.png" />
+    <None Remove="Resources\Images\add.png" />
+    <None Remove="Resources\Images\admin.png" />
+    <None Remove="Resources\Images\back.png" />
+    <None Remove="Resources\Images\broom.png" />
+    <None Remove="Resources\Images\calendar.png" />
+    <None Remove="Resources\Images\checkmark.png" />
+    <None Remove="Resources\Images\delete.png" />
+    <None Remove="Resources\Images\dice.png" />
+    <None Remove="Resources\Images\doctor.png" />
+    <None Remove="Resources\Images\exit.png" />
+    <None Remove="Resources\Images\eye.png" />
+    <None Remove="Resources\Images\faculty.png" />
+    <None Remove="Resources\Images\filter.png" />
+    <None Remove="Resources\Images\forward.png" />
+    <None Remove="Resources\Images\group.png" />
+    <None Remove="Resources\Images\hospital.png" />
+    <None Remove="Resources\Images\key.png" />
+    <None Remove="Resources\Images\lock.png" />
+    <None Remove="Resources\Images\login.png" />
+    <None Remove="Resources\Images\mail.png" />
+    <None Remove="Resources\Images\page.png" />
+    <None Remove="Resources\Images\password.png" />
+    <None Remove="Resources\Images\search.png" />
+    <None Remove="Resources\Images\send.png" />
+    <None Remove="Resources\Images\settings.png" />
+    <None Remove="Resources\Images\statistics.png" />
+    <None Remove="Resources\Images\student.png" />
+    <None Remove="Resources\Images\time.png" />
+    <None Remove="Resources\Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Identity\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="19.2.0.57" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\account.png" />
+    <Resource Include="Resources\Images\add.png" />
+    <Resource Include="Resources\Images\admin.png" />
+    <Resource Include="Resources\Images\back.png" />
+    <Resource Include="Resources\Images\broom.png" />
+    <Resource Include="Resources\Images\calendar.png" />
+    <Resource Include="Resources\Images\checkmark.png" />
+    <Resource Include="Resources\Images\delete.png" />
+    <Resource Include="Resources\Images\dice.png" />
+    <Resource Include="Resources\Images\doctor.png" />
+    <Resource Include="Resources\Images\exit.png" />
+    <Resource Include="Resources\Images\eye.png" />
+    <Resource Include="Resources\Images\faculty.png" />
+    <Resource Include="Resources\Images\filter.png" />
+    <Resource Include="Resources\Images\forward.png" />
+    <Resource Include="Resources\Images\group.png" />
+    <Resource Include="Resources\Images\hospital.png" />
+    <Resource Include="Resources\Images\key.png" />
+    <Resource Include="Resources\Images\lock.png" />
+    <Resource Include="Resources\Images\login.png" />
+    <Resource Include="Resources\Images\mail.png" />
+    <Resource Include="Resources\Images\page.png" />
+    <Resource Include="Resources\Images\password.png" />
+    <Resource Include="Resources\Images\search.png" />
+    <Resource Include="Resources\Images\send.png" />
+    <Resource Include="Resources\Images\settings.png" />
+    <Resource Include="Resources\Images\statistics.png" />
+    <Resource Include="Resources\Images\student.png" />
+    <Resource Include="Resources\Images\time.png" />
+    <Resource Include="Resources\Images\user.png" />
+  </ItemGroup>
+
+</Project>
